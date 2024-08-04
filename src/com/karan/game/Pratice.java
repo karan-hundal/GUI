@@ -1,6 +1,10 @@
+package com.karan.game;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+
+
 public class Pratice extends JFrame implements ItemListener, ActionListener
 {
    final int BOXES = 10;// total number of checkBoxes
@@ -16,9 +20,10 @@ public class Pratice extends JFrame implements ItemListener, ActionListener
    int x, y;
    int ran;
    int numChosen;
-   public Pratice()
+   public Pratice(String label)
    {
-      super("LastManStanding");
+
+      super(label);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
       setLayout(flow);
@@ -35,7 +40,7 @@ public class Pratice extends JFrame implements ItemListener, ActionListener
    }
    public static void main(String[] arguments)
    {
-      Pratice frame = new Pratice();
+      Pratice frame = new Pratice("Last Man Standing");
       frame.setSize(300,120);
       frame.setVisible(true);
    }
